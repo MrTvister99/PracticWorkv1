@@ -1,0 +1,24 @@
+﻿<Window x:Class="PracticWork.Window.WindowEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticWork.Window"
+        mc:Ignorable="d"
+        Title="WindowEdit" Height="450" Width="800">
+    <Grid>
+        <StackPanel Background="Chocolate">
+            <Label Content="Дата заявки:" Margin="5" />
+            <TextBox Text="{Binding DateAdd, Mode=TwoWay}" Margin="5" />
+            <Label Content="Продукция:" Margin="5" />
+            <TextBox Text="{Binding equipment, Mode=TwoWay}" Margin="5" />
+            <Label Content="Кол-во:" Margin="5" />
+            <TextBox Text="{Binding Count, Mode=TwoWay}" Margin="5" />
+            <Label Content="Фамилия заказчика:" Margin="5" />
+            <TextBox Text="{Binding UsersFIO, Mode=TwoWay}" Margin="5" />
+            <Label Content="Статус работы:" Margin="5" />
+            <TextBox Text="{Binding Status, Mode=TwoWay}" Margin="5" />
+            <Button  Content="Сохранить" Click="OnSaveButtonClick" Command="{Binding SaveCommand}" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>
